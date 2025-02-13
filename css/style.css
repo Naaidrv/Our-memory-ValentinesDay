@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body {
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    background-color: #ffe6f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-image: url(/assets/background.jpg);
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    overflow: auto;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Centra el modal verticalmente */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px; /* Ancho máximo para pantallas grandes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+.modal-content ol li {
+    margin-bottom: 15px; /* Espacio entre cada regla */
+}
+
+/* Botón para cerrar el modal */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #d63384;
+}
+
+.close:hover {
+    color: #a3245f;
+}
+
+/* Estilos para el botón de comenzar a jugar */
+#startGameBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #d63384;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#startGameBtn:hover {
+    background-color: #a3245f;
+}
+
+h1 {
+    color: #d63384;
+}
+
+#stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos */
+    margin: 10px 0;
+    font-size: 18px;
+}
+#timer, #attempts {
+    color: #be185d;
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+.material-icons-outlined{
+    color: #be185d;
+    font-size: 25px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 12px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-image: url('/assets/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #dedede;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
+  }
+
+.flipped {
+    background-image: none; /* Oculta la imagen de fondo cuando la carta se voltea */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+.flipped img {
+    display: block;
+}
+#message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #a3245f;
+}
+#restart {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #d63384;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+#restart:hover {
+    background-color: #a3245f;
+}
+
+#openModalBtn{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #d63384;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#openModalBtn:hover {
+    background-color: #ffb7d9;
+}
+
+@media (max-width: 500px) {
+    .game-container {
+        grid-template-columns: repeat(3, 80px);
+    }
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .modal-content {
+        margin: 20% auto; /* Ajusta el margen superior para pantallas pequeñas */
+    }
+}

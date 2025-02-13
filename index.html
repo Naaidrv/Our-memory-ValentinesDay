@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria - San Valentin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Contenedor del modal -->
+<div id="rulesModal" class="modal">
+    <!-- Contenido del modal -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 style="text-align: center;">Reglas del Juego</h2>
+        <ol style="text-align: left;">
+            <li>Solo tienes <strong>3 intentos</strong> para adivinar 3 pares.</li>
+            <li>El tiempo es de <strong>30 segundos</strong>, que comienza a correr desde la primera interacción.</li>
+            <li>Si el tiempo se acaba y solo adivinaste 1 par, ganas <strong>el 3er. premio.</strong></li>
+            <li>Si adivinaste 2 pares, ganas una <strong>el 2do. premio</strong></li>
+            <li>Si adivinaste los 3 pares, ganas el <strong>1er. PREMIO.</strong></li>
+            <li>Si adivinaste los 3 pares antes de que se acabe el tiempo, automaticamente ganas el <strong>1er. PREMIO.</strong></li>
+            <strong style="color: #d63384;"> Nota: Los premios no son acumulables xd</strong>
+        </ol>
+        <button id="startGameBtn">Comenzar a jugar</button>
+    </div>
+</div>
+
+    <h1>Nuestro memorama 💖</h1>
+    <div id="stats">
+        <span id="timer"><i class="material-icons-outlined">timer</i> Tiempo: <span id="time">30</span>s</span>
+        <span id="attempts"><i class="material-icons-outlined">workspace_premium</i> Intentos: <span id="remaining">3</span></span>
+    </div>
+    <!-- Botón para abrir el modal (opcional) -->
+<button id="openModalBtn">Ver reglas del juego</button>
+    <div class="game-container" id="gameBoard"></div>
+    <p id="message"></p>
+    <button id="restart">Reiniciar</button>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>
