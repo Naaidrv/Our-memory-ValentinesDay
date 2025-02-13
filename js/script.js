@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let gameStarted = false; // Para controlar si el juego ha comenzado
     const prizes = [
         "No ganaste nada 😢, pero puedes intentar de nuevo.",
-        "🎨 Un set de acuarelas",
-        "🍽️ Una cena/comida fuera de casa!",
-        "🎮 5,000 Pavos en Fortnite!"
+        "Ganaste 🎨 Un set de acuarelas",
+        "Ganaste 🍽️ Una cena/comida fuera de casa!",
+        "GANASTE 🎮 5,000 Pavos en Fortnite!"
     ];
     const gameBoard = document.getElementById("gameBoard");
     const timeDisplay = document.getElementById("time");
